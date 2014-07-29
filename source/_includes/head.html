@@ -1,0 +1,36 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="SHORTCUT ICON" href=""> -->
+
+
+
+  {% if page.title != 'Home'%}<title>{{ page.title }} &ndash; Everett's Site</title>{% endif %}
+  {% if page.title == 'Home'%}<title>Everett's Site &ndash; Home</title>{% endif %}
+
+
+
+
+	{% if page.url == '/index.html' %}
+		{% assign siteName = '' %}
+	{% else %}
+		{% assign siteName = page.url %}
+	{% endif %}
+
+
+
+
+  {% stylesheet app %}
+  {% javascript modernizr %}
+
+
+
+
+
+
+{% include head-fonts.html %}
+
+{% include head-analytics.html %}
+
+</head>

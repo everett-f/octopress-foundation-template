@@ -1,0 +1,48 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="SHORTCUT ICON" href="http://activesolarusa.com/source/img/favicon/Active-Solar-Favicon.ico"> -->
+  <!-- <link rel="SHORTCUT ICON" href="http://activesolarusa.com/Active-Solar-Favicon.ico"> -->
+  <!-- <link rel="SHORTCUT ICON" href="http://localhost:4000/ActiveSolar/source/img/favicon/Active-Solar-Favicon.ico"> -->
+
+  <!-- <link rel="SHORTCUT ICON" href="http://activesolarusa.com/Active-Solar-Favicon.ico"> -->
+
+
+  {% if page.title != 'Home'%}<title>{{ page.title }} &ndash; Active Solar</title>{% endif %}
+  {% if page.title == 'Home'%}<title>Active Solar &ndash; Home</title>{% endif %}
+
+
+	{% if page.url == '/index.html' %}
+
+		{% assign siteName = '' %}
+
+	{% else %}
+
+		{% assign siteName = page.url %}
+
+
+	{% endif %}
+
+
+	<!-- <link rel="canonical" href="http://www.activesolarusa.com{{ siteName }}"/> -->
+
+  <!-- <link rel="stylesheet" href="_assets/stylesheets/app.css"> -->
+
+  {% stylesheet app %}
+  
+
+  {% javascript app %}
+
+
+
+
+
+
+
+
+{% include head-fonts.html %}
+
+{% include head-analytics.html %}
+
+</head>
